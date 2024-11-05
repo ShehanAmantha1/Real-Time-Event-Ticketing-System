@@ -1,0 +1,39 @@
+/* CategoryBrowse.css */
+.category-browse {
+    text-align: center; /* Center the category title */
+}
+
+.category-list {
+    display: flex; /* Align category items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.category-item {
+    position: relative; /* Positioning for the background image */
+    width: 250px; /* Set a width for the category item */
+    height: 350px; /* Set a height for the category item */
+    margin: 10px; /* Space between items */
+    border-radius: 10px; /* Optional: rounded corners */
+    overflow: hidden; /* Hide overflow */
+    color: white; /* Text color */
+    display: flex; /* Flexbox for centering text */
+    align-items: flex-end; /* Align text to the bottom */
+    padding: 10px; /* Padding for text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.category-image {
+    width: 100%; /* Make the image fill the category item */
+    height: 100%; /* Make the image fill the category item */
+    object-fit: cover; /* Cover the area without stretching */
+    position: absolute; /* Position image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Send image behind text */
+}
+
+.category-name {
+    position: relative; /* Position text on top of the image */
+    z-index: 2; /* Bring text in front of the image */
+}

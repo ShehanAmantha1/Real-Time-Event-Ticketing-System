@@ -1,0 +1,101 @@
+.slideshow-container {
+    position: relative; /* For absolute positioning of navigation buttons */
+    max-width: 100%; /* Full width of the viewport */
+    height: 500px; /* Full height of the viewport */
+    overflow: hidden; /* Hide overflow for images */
+}
+
+.slideshow {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for slides */
+}
+
+.slide-image {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+.slide-content {
+    padding: 15px; /* Space around the content */
+    color: #fff; /* White text for visibility */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+    position: absolute; /* Position absolutely within the slideshow */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    border-radius: 8px; /* Rounded corners for content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.button-container {
+    position: absolute; /* Positioning for the button container */
+    bottom: 0; /* Align to the bottom */
+    left: 47%;
+    bottom: 30px; /* Distance from the bottom */
+    padding: 10px; /* Optional padding */
+}
+
+.book-button {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth background color transition */
+}
+
+.book-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.slideshow-navigation {
+    position: absolute; /* Position navigation buttons */
+    top: 50%; /* Center vertically */
+    width: 100%; /* Full width of the container */
+    display: flex; /* Flexbox for navigation layout */
+    justify-content: space-between; /* Space between buttons */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Circular buttons */
+    width: 40px; /* Fixed width for buttons */
+    height: 40px; /* Fixed height for buttons */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 24px; /* Font size for arrows */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.slide-indicators {
+    position: absolute; /* Position indicators */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center indicators */
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex; /* Flex layout for indicators */
+    gap: 10px; /* Space between indicators */
+}
+
+.indicator {
+    width: 12px; /* Width of indicators */
+    height: 12px; /* Height of indicators */
+    border-radius: 50%; /* Circular indicators */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.indicator.active {
+    background-color: #fff; /* Solid white for active indicator */
+}

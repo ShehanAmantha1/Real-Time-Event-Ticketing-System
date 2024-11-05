@@ -1,0 +1,32 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding around the navbar */
+    background-color: #282c34; /* Background color */
+    color: white; /* Text color */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Font size for page name */
+    font-weight: bold; /* Bold text for page name */
+}
+
+
+.navbar-button {
+    margin-left: 20px; /* Space between links */
+    padding: 10px 15px; /* Padding for the button */
+    color: white; /* Button text color */
+    background-color: #61dafb; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+}
