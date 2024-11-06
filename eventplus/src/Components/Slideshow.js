@@ -16,6 +16,7 @@ const slides = [
         title: 'Event 2',
         description: 'Description for Event 2',
         date: '2024-12-05',
+        
     },
     {
         id: 3,
@@ -54,9 +55,7 @@ const Slideshow = () => {
             <div className="slideshow">
                 <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="slide-image" />
                 
-                <div className="button-container">
-                        <button className="book-button">Book Now</button>
-                    </div>
+                
             </div>
             <div className="slideshow-navigation">
                 <button onClick={prevSlide} className="nav-button">❮</button>

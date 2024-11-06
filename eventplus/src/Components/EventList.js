@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import TicketPurchaseModal from './TicketPurchaseModal'; // Import the modal
 import './EventList.css'; // Import a CSS file for styling
+
 
 const EventListVertical = () => {
   const [events, setEvents] = useState([]);
+  const [selectedEvent, setSelectedEvent] = useState(null); // State to manage selected event for purchase modal
 
   useEffect(() => {
     // Fetch events from an API or database (mocked here)
@@ -12,6 +15,14 @@ const EventListVertical = () => {
     ];
     setEvents(fetchedEvents);
   }, []);
+
+  const openModal = (event) => {
+    setSelectedEvent(event); // Set the selected event to show in the modal
+  };
+
+  const closeModal = () => {
+    setSelectedEvent(null); // Close the modal
+  };
 
   return (
     <div className="event-list-vertical-container">
@@ -27,11 +38,15 @@ const EventListVertical = () => {
             </div>
             <div className="event-actions-vertical">
               <button className="view-details-button">View Details</button>
-              <button className="book-now-button">Book Now</button>
+              <button className="book-now-button" onClick={() => openModal(event)}>Book Now</button>
             </div>
           </div>
         ))}
       </div>
+      {/* Conditionally render the modal when an event is selected */}
+      {selectedEvent && (
+        <TicketPurchaseModal event={selectedEvent} onClose={closeModal} />
+      )}
     </div>
   );
 };

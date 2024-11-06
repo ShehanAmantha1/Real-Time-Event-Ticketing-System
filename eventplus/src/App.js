@@ -5,6 +5,7 @@ import CategoryBrowse from './Components/CategoryBrowse';
 import Slideshow from './Components/Slideshow';
 import EventListVertical from './Components/EventList';
 import Footer from './Components/Footer';
+import CreateEvent from './Components/CreateEvent';
 
 
 
@@ -14,8 +15,10 @@ const App = () => {
       <Navbar/>
       <Header/>
       <Slideshow/>
+      <CreateEvent/>
       <CategoryBrowse/>
       <EventListVertical/>
+      
       <Footer />
     </div>
   );
